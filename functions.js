@@ -6,7 +6,7 @@ class Calculatrice {
     }
 
     annee_bissextile(annee) {
-        if ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0) {
+        if ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0) { // Si l'année est divisible entre 4 et 100 ou entre 400 donc 
             return 366
         }
         else {
@@ -48,7 +48,7 @@ class Calculatrice {
 
         let jours_feries = 0;
 
-
+        //On test que la date crée à partir de l'année ne soit pas ni samedi ni dimanche
         if (j_an.getDay() != 6 && j_an.getDay() != 0) {
             jours_feries++;
         }
@@ -85,7 +85,7 @@ class Calculatrice {
         return jours_feries + paques + j_asc + l_pent;
 
     }
-
+    // On appelle les functions crées à fin de retourner la valeur de RTT
     jours_rtt(annee, jour_t, c_payes) {
 
         let type_anne = this.annee_bissextile(annee);
